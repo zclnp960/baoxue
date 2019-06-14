@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>暴雪商城-购物车</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <script src="/libs/jquery/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header id="head-container">
+
+    </header>
+    <main class="shopcart-box">
+        <div class="top">
+            <ul class="top-ul"> 
+                <li><a href="/index.html">首页</a>>&nbsp;</li>
+                <li>购物车</li>
+            </ul>
+        </div>
+        <div class="bottom-list">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                       <th class="firet-th">
+                        <input type="checkbox" id="theadCheck" value="option1">
+                        全选
+                       </th>
+                       <th></th>
+                       <th colspan="2">商品信息</th>
+                       <th>单价</th>
+                       <th>数量</th>
+                       <th>小计</th>
+                       <th>活动</th>
+                       <th></th> 
+                    </tr>
+                </thead>
+                
+                <tfoot>
+                    <tr>
+                        <td colspan="1" class="tfoot-first-td">
+                            <input type="checkbox" class="tfootCheck" value="option1">
+                        </td>
+                        <td colspan="4" class="batch-op">
+                            已选(<span id="tfootInt">0</span>)
+                            <a id="deleteBtn" href="javascript:;">批量删除</a>
+                        </td>
+                        <td colspan="2" class="total-amount">
+                            <span class="top-one">
+                                应付金额
+                                <span class="top-one-wrap">
+                                    ￥：<i class="priceOne ione"></i>
+                                </span>
+                            </span>
+                            <span class="bottom-two">
+                               商品合计：
+                               <span class="bottom-two-wrap">
+                                   ￥:<i class="priceOne itwo"></i>
+                               </span>
+                            </span>
+                        </td>
+                        <td colspan="2">
+                            <button class="btn btn-info btn-lg" id="loginbtn">下单</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer id="footer-container">
+
+    </footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/cart.js"></script>
+</body>
+</html>

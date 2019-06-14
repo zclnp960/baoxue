@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>魔兽周边商城-详情页</title>
+    <link rel="stylesheet" href="/css/details.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header id="head-container">
+
+    </header>
+    <!-- 内容 -->
+    <main class="details-container">
+        <div class="details-wrap">
+            <div class="breadcrumb">
+                <div class="cates">
+                    <a href="/index.html">首页</a>
+                    <i>></i>
+                    <a href="">手办模型</a>
+                    <i>></i>
+                    <a href="">模型收藏</a>
+                    <i>></i>
+                    <a href="javascript:;" class="productName" id="productName"></a>
+                </div>
+            </div>
+            <div class="productDetails">
+                <div class="productInfo">
+                    <!-- 左侧图片详情 -->
+                    <div id="imageBox">
+                        <script type="text/html" id="leftImg">
+                            {{each data item }}
+                                <div class="images">
+                                    <div class="bigImage">
+                                        <img id="leftOne" src="{{ item.img.one }}" alt="">
+                                    </div>
+                                    <div class="smallImages" id="imgLi">
+                                        <ul>
+                                            <li>
+                                                <img src="{{ item.img.one }}" alt="">
+                                            </li>
+                                            <li>
+                                                <img src="{{ item.img.two }}" alt="">
+                                            </li>
+                                            <li>
+                                                <img src="{{ item.img.three }}" alt="">
+                                            </li>
+                                            <li>
+                                                <img src="{{ item.img.four }}" alt="">
+                                            </li>
+                                            <li>
+                                                <img src="{{ item.img.five }}" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {{ /each }}
+                        </script>
+                    </div>
+                    <!-- 右侧商品信息以及加入购物车 -->
+                    <div class="info">
+                        <div class="desc" id="boxDesc">
+                            <script type="text/html" id="descWrap">
+                                {{ each data item }}
+                                    <div class="pName infoDev">
+                                        <span>{{ item.text.title }}</span>
+                                    </div>
+                                    <div class="pDesc infoDev">
+                                        <span>{{ item.text.describe }}！</span>
+                                    </div>
+                                    <div class="pSale infoDev">
+                                        <div class="infoDev">
+                                            <span>售价：</span>
+                                            <span class="price-rmb">￥</span>
+                                            <span class="price-num">{{ item.price }}.00</span>
+                                        </div>
+                                        <div class="service infoDev">
+                                            <div class="label-div">
+                                                <span>服务：</span>
+                                            </div>
+                                            <div class="services">
+                                                <div class="serviceItem">
+                                                    <span>.</span>
+                                                    <span>全场满999包邮</span>
+                                                    <span> </span>
+                                                </div>
+                                                <div class="serviceItem">
+                                                    <span>.</span>
+                                                    <span>任何地区都能配送</span>
+                                                    <span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{ /each }}
+                            </script>
+                        </div>
+                        <!-- 立即购买  加入购物车 -->
+                        <div class="actions">
+                            <div class="specs infoDev">
+                                <div class="specLabel">
+                                    <span>型号：</span>
+                                </div>
+                                <div class="specBlocks">
+                                    <div class="active">
+                                        <a href="">
+                                            <span>限定礼包</span>
+                                        </a>
+                                        <span class="icon"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="num specs infoDev">
+                                <div class="specLabel">
+                                    <span>数量：</span>
+                                </div>
+                                <div class="specBlocks">
+                                    <div class="number-input">
+                                        <a class="oper  minus" href="javascript:;" id="minusBtn">
+                                            <i>-</i>
+                                        </a>
+                                        <input id="numText" type="text" value="1">
+                                        <a class="oper plus" href="javascript:;" id="plusBtn">
+                                            <i>+</i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action infoDev">
+                                <div class="btns">
+                                    <a class="commonBtn">
+                                        <span>立即购买</span>
+                                    </a>
+                                    <a class="commonBtn2" id="shopBtn">
+                                        <span>加入购物车</span>
+                                    </a>
+                                </div>
+                                <div class="collect">
+                                    <div class="top">
+                                        <span></span>
+                                    </div>
+                                    <div class="down">
+                                        <span>收藏</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 尾部 -->
+    <footer id="footer-container">
+
+    </footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/details.js"></script>
+</body>
+</html>

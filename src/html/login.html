@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/bootstrap/js/bootstrap.min.js">
+</head>
+<body>
+    <main class="loginContent">
+        <div class="loginContent-wrap">
+            <div class="header-box">
+                <p>欢迎登录网易邮箱帐号</p>
+            </div>
+            <form class="form-horizontal loginFrame">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control inputuser" id="inputuser" placeholder="邮箱">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control inputpwd" id="inputPassword3" placeholder="密码">
+                    </div>
+                </div>
+                <div id="nobox"></div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10 btn-wrap">
+                        <button type="submit" class="btn btn-default" id="loginbtn">登录</button>
+                    </div>
+                </div>
+            </form>
+            <div class="bottom-box">
+                <a href="">忘记密码？</a>
+                <a href="/html/signin.html">去注册</a>
+            </div>
+        </div>
+       
+    </main>
+    <footer id="footer-container">
+
+    </footer>
+    <script src="/libs/requirejs/require.js" data-main="/js/login.js"></script>
+</body>
+</html>

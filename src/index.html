@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>暴雪周边</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+</head>
+<body>
+    <!-- 头部容器盒子 -->
+    <header id="head-container">
+
+    </header>
+    <!-- 主体 -->
+    <main>
+        <!-- 轮播图slides-container -->
+        <div class="slides-container">
+            <ul class="slides-list">
+                <li><a href="javascript:;"><img src="/images/lunbo-one.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="/images/lunbo-two.jpg" alt=""></a></li>
+            </ul>
+            <ol class="ol-list"></ol>
+            <span class="goNext" id="goNext">&gt;</span>
+            <span class="goPrev" id="goPrev">&lt;</span>
+        </div>
+        <!-- 游戏导航栏 -->
+        <div class="main-container">
+            <div class="home-game-list">
+                <div class="carrousel-container" id="aidCarrouselr">
+                
+                </div>
+                <script type="text/html" id="carrouselList">
+                    {{ each list item}}
+                    <span class="home-game-item">
+                        <img src="{{ item.img }}" alt="">
+                        <i class="iones" aId = {{ item.id }}>{{ item.name }}</i>
+                    </span>
+                    {{ /each }}
+                </script>
+            </div>
+        </div>
+        <!-- 人气热销栏 -->
+        <div class="home-hot" id="aidHot">
+            <div class="hot-top">
+                <i class="iconfont icon-zan"></i>
+                <span>人气热销</span>
+            </div>
+            <div class="hot-bottom" id="hot-bottoms">
+               <div class="leftimg" id="imgOne"></div>
+               <div class="rightimg" id="imgTwo"></div>
+            </div>
+             <!-- 左面图片 -->
+            <script type="text/html" id="lefthotImg">
+                {{ each list item}}
+                    <span class="leftimg-span">
+                        <img src="{{ item.img }}" alt="">
+                        <span class="left-text" aId = "{{ item.id }}">{{ item.intro}}</span>
+                    </span>
+                {{ /each }}
+            </script>
+            <!-- 右面图片 -->
+            <script type="text/html" id="righthotImg">
+                {{ each list item}}
+                    <span class="rightimg-span">
+                        <img src="{{ item.img }}" alt="">
+                        <span class="right-text" aId = "{{ item.id }}">{{ item.intro}}</span>
+                    </span>
+                {{ /each }}
+            </script>
+        </div>
+        <!-- 最新周边 -->
+        <div class="home-new">
+            <div class="new-top">
+                <i class="iconfont icon-xiaomaibu"></i>
+                <span>最新周边</span>
+            </div>
+            <div class="home-bottom">
+                    <span class="new-prev" id="newPrev">&lt;</span>
+                    <span class="new-next" id="newNext">&gt;</span>
+                <div class="home-new-main" id="newMain">
+                    
+                   
+                    
+                </div>
+                <script type="text/html" id="newTem">
+                    {{each list item}}
+                        <a class="new-a-list" href="/html/details.html?id={{ item.id }}" aId= {{ item.id }}>
+                            <img class="prod-img" src="{{ item.imgone }}" alt="">
+                            <img class="g-icon" src="{{ item.imgtwo }}" alt="">
+                            <span class="prod-name">{{ item.spanone }}</span>
+                            <span class="prod-desc">{{ item.spantwo }}</span>
+                            <span class="prod-price">￥{{ item.price}}</span>
+                        </a>
+                    {{/each}}
+                </script>
+            </div>
+        </div>
+        <!-- 居家/手办/数码/配饰/服装图文 -->
+        <div class="floors indexFloors">
+            <script type="text/html" id="aidFloors">
+                {{ each list item }}
+                    <div class="floor-container">
+                        <div class="floor-top">
+                            <div class="common-section-header">
+                                <i></i>
+                                <span class="zoobaby">{{ item.title }}</span>
+                                <span class="seemore">查看更多&nbsp;&nbsp;></span>
+                                <ul class="floor-title-list">
+                                    <li>
+                                        <span>{{ item.ul.one }}</span>
+                                        &nbsp;&nbsp;
+                                        /
+                                    </li>
+                                    <li>
+                                        <span>{{ item.ul.two }}</span>
+                                        &nbsp;&nbsp;
+                                        /
+                                    </li>
+                                    <li>
+                                        <span>{{ item.ul.three }}</span>
+                                        &nbsp;&nbsp;
+                                        /
+                                    </li>
+                                    <li>
+                                        <span>{{ item.ul.four }}</span>
+                                        &nbsp;&nbsp;
+                                        /
+                                    </li>
+                                    <li>
+                                        <span>{{ item.ul.five }}</span>
+                                        &nbsp;&nbsp;
+                                        /
+                                    </li>
+                                    <li>
+                                        <span>{{ item.ul.six }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bigimg">
+                                <img class="floor-banner" src="{{ item.imgone }}" alt="">
+                            </div>
+                        </div>
+                        <div class="common-section-bottom">
+                            <div class="common-bottom-wrrap">
+                                <div class="bottom-four-img">
+                                    <span class="img-container">
+                                        <span class="hover-enlarge">
+                                                <img src="{{ item.imgtwo.one }}" alt="">
+                                        </span>
+                                    </span>
+                                    <span class="describe-floor">{{ item.describe }}</span>
+                                    <span class="price-floor">￥&nbsp;{{ item.price }}</span>
+                                </div>
+                                <div class="bottom-four-img">
+                                    <span class="img-container">
+                                        <span class="hover-enlarge">
+                                            <img src="{{ item.imgtwo.two }}" alt="">
+                                        </span>
+                                    </span>
+                                    <span class="describe-floor">{{ item.describe }}</span>
+                                    <span class="price-floor">￥&nbsp;{{ item.price }}</span>
+                                </div>
+                                <div class="bottom-four-img">
+                                    <span class="img-container">
+                                        <span class="hover-enlarge">
+                                            <img src="{{ item.imgtwo.three }}" alt="">   
+                                        </span>
+                                    </span>
+                                    <span class="describe-floor">{{ item.describe }}</span>
+                                    <span class="price-floor">￥&nbsp;{{ item.price }}</span>
+                                </div>
+                                <div class="bottom-four-img">
+                                    <span class="img-container">
+                                        <span class="hover-enlarge">
+                                            <img src="{{ item.imgtwo.four }}" alt="">
+                                        </span>
+                                    </span>
+                                    <span class="describe-floor">{{ item.describe }}</span>
+                                    <span class="price-floor">￥&nbsp;{{ item.price }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ /each }}
+            </script>
+        </div>
+    </main>
+    <!-- 尾部 -->
+    <footer id="footer-container">
+        
+    </footer>
+    <script src="/libs/requirejs/require.js" data-main = "/js/index.js"></script>
+</body>
+</html>

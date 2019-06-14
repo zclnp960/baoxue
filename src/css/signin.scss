@@ -1,0 +1,75 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.body{
+    background: #efefef;
+    width: 100%;
+    height: auto;
+}
+.main-box{
+    .top{
+        width: 1000px;
+        height: 130px;
+        margin: 0px auto;
+        a{
+            .m-logo{
+                float: left;
+                width: 300px;
+                height: 60px;
+                background-position: -50px -18px;
+                margin-top: 35px;
+                background: url(/images/logone.jpg) no-repeat;
+            }
+        }
+        .m-tr-block{
+            float: right;
+            font-size: 18px;
+            margin-top: 50px;
+            color: #666;
+            #btn_Login{
+                color: red;
+                text-decoration: none;
+            }
+        }
+    }
+    .bottom{
+        position: relative;
+        width: 1000px;
+        padding-bottom: 55px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 3px 3px #cbc9c9;
+        .bottom-wrap{
+            .label-box{
+                float: left;
+                width: 340px;
+                text-align: right;
+                margin-top: 12px;
+                font-size: 16px;
+                line-height: 45px;
+                color: #333;
+            }
+            .form-control{
+                float: left;
+                height: 44px;
+                width: 280px;
+                padding-right: 40px;
+                margin-top: 12px;
+                border: solid 1px #ddd;
+                font-size: 16px;
+                text-indent: 0.5em;
+            }
+            .btn{
+                margin-left: 340px;
+                height: 44px;
+                width: 280px;
+                background: #ca5252;
+                color: #fff;
+                font-size: 18px;
+            }
+        }
+    }
+}

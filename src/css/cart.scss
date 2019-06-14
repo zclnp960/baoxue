@@ -1,0 +1,102 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+a{
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+}
+@import "module/header.scss";
+@import "module/footer.scss";
+#myModal{
+    top: 210px;
+}
+.shopcart-box{
+    .top{
+        .top-ul{
+            width: 1090px;
+            margin: auto;
+            padding: 20px 0;
+            li{
+                display: inline-block;
+                a{
+                    color: black
+                }
+                &:nth-child(2){
+                    color:#00aeff;
+                }
+            }
+            
+        }
+    }
+    .bottom-list{
+        width: 1090px;
+        margin: auto;
+        position: relative;
+        margin-bottom: 110px;
+        .table{
+            .tbody-first-td{
+                padding-right: 39px;
+            }
+            .tfoot-first-td{
+               text-align: center;
+               padding-right: 39px;
+            }
+            font-size: 14px;
+            thead{ 
+                th{
+                    font-weight: 400;
+                    padding: 15px 0px;
+                    text-align: center
+                }
+                .firet-th{
+                    text-align: center;
+                }
+            }
+            
+            tfoot{
+                td{
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                .batch-op{
+                    text-align: left;
+                    a{
+                        margin-left: 60px;
+                        text-decoration: none;
+                    }
+                }
+                .total-amount{
+                    span{
+                        display: block
+                    }
+                    .top-one{
+                        text-align: left;
+                        color: #333;
+                        font-size: 16px;
+                        .top-one-wrap{
+                            display: inline-block;
+                            .ione{
+                                font-style: normal;
+                                font-size: 24px;
+                                color: #e60012;
+                            }
+                        }
+                    }
+                    .bottom-two{
+                        margin-left: -95px;
+                        color: #777;
+                        font-size: 12px;
+                        .bottom-two-wrap{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

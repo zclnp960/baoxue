@@ -1,0 +1,125 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+a{
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+}
+@import "module/header.scss";
+@import "module/footer.scss";
+main{
+    .title{
+        .title-ul{
+            width: 1090px;
+            margin: auto;
+            padding: 20px 0;
+            font-size: 16px;
+            li{
+                display: inline-block;
+            }
+            li:nth-child(2){
+                color: #00aeff;
+            }
+        }
+    }
+    .search-res-container {
+        margin-bottom: 105px;
+        ul{
+            li{
+                display: inline-block;
+            }
+        }
+        .search-criteria-container {
+            font-size: 14px;
+            border: 1px solid #e8e8e8;
+            color: #333;
+            background: #fff;
+            border-bottom: none;
+            ul{
+                border-bottom: 1px dashed #e8e8e8;
+            }
+            .header{
+                width: 140px;
+                padding-right: 50px;
+                text-align: right;
+                box-sizing: border-box;
+                color: #757575;
+            }
+            .list-items{
+                li{
+                    padding:20px 45px 20px 0px;
+                    font-size: 14px;
+                    
+                }
+            }
+            .three-ul{
+                li{
+                    padding:20px 45px 20px 0px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .search-result{
+            .product-list{
+                margin-top: 28px;
+                margin-bottom: 50px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                li{
+                    width: 260px;
+                    height: 300px;
+                    border: 1px solid #e8e8e8;
+                    margin-bottom: 16px;
+                    text-align: center;
+                    background: #fff;
+                    position: relative;
+                    span{
+                        display: block;
+                        cursor: pointer;
+                    }
+                    .prod-info{
+                        margin: 12px auto;
+                        position: relative;
+                    }
+                    .label{
+                        display: inline-block;
+                        color: #b3b3b3;
+                    }
+                    .price{
+                        display: inline-block;
+                        color: #e60012;
+                        font-size: 24px;
+                        i{
+                            font-style: normal;
+                        }
+                    }
+                    img{
+                        margin-top: 10px;
+                        cursor: pointer;
+                    }
+                    .four{
+                        position: absolute;
+                        bottom: 40px;
+                        left: 6px;
+                        i{
+                            color: #e60012;
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fix-width {
+        width: 1090px;
+        margin: auto;
+        position: relative;
+    }
+}

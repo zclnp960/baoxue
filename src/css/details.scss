@@ -1,0 +1,282 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+a{
+    text-decoration: none;
+}
+ul, ol{
+    list-style: none;
+}
+@import "module/header.scss";
+@import "module/footer.scss";
+.details-container{
+    width: 1090px;
+    height: auto;
+    margin: 0px auto 0px auto;
+    .details-wrap{
+        .breadcrumb{
+            padding: 20px 0px;
+            .cates{
+                width: 1090px;
+                font-size: 16px;
+                a{
+                    color: #333;
+                    text-decoration: none;
+                }
+                .productName{
+                    color: #00aeff;
+                    cursor: auto;
+                }
+            }
+        }
+    }
+    .productDetails{
+        .productInfo{
+            width: 100%;
+            height: 500px;
+            .images{
+                height: 500px;
+                width: 500px;
+                float: left;
+                padding-top: 30px;
+                .bigImage{
+                    float: left;
+                    width: 400px;
+                    img{
+                        width: 380px;
+                        height: 380px;
+                    }
+                }
+                .smallImages{
+                    float: right;
+                    width: 85px;
+                    ul{
+                        height: 410px;
+                        overflow: hidden;
+                        li{
+                            width: 72px;
+                            height: 72px;
+                            border: 1px solid #efefef;
+                            margin-bottom: 10px;
+                            img{
+                                width: 70px;
+                                height: 70px;
+                                background-color: #f4f4f4;
+                            }
+                        }
+                        //预设样式
+                        .we-li{
+                            border: 1px solid #00aeff;
+                        }
+                    }
+                }
+            }
+            // 右侧商品信息以及加入购物车
+            .info{
+                float: right;
+                width: 500px;
+                margin-left: 50px;
+                .infoDev {
+                    padding: 5px 0;
+                }
+                //上半部分
+                .desc{
+                    border-bottom: 1px solid #cccbcb;
+                    margin-bottom: 20px;
+                    .pName{
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    .pDesc{
+                        color: #999;
+                    }
+                    .pSale{
+                        margin: 10px 0;
+                        padding-left: 10px;
+                        color: #999;
+                        display: inline-block;
+                        .price-rmb{
+                            font-size: 16px;
+                            color: red;
+                        }
+                        .price-num{
+                            font-size: 26px;
+                            color: red;
+                        }
+                    }
+                    .service{
+                        float: left;
+                        .label-div{
+                            float: left;
+                            width: 50px;
+                        }
+                        .services{
+                            line-height: 20px;
+                            float: left;
+                            width: 430px;
+                            cursor: pointer;
+                            .serviceItem{
+                                float: left;
+                                padding-right: 10px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+                //下半部分
+                .actions{
+                    .specs{
+                        display: inline-block;
+                        .specLabel{
+                            width: 60px;
+                            float: left;
+                            padding-top: 10px;
+                        }
+                        .specBlocks{
+                            width: 430px;
+                            float: left;
+                            .active{
+                                width: 88px;
+                                height: 31px;
+                                padding: 0px 15px;
+                                border: 1px solid #00aeff;
+                                margin: 5px 10px;
+                                position: relative;
+                                font-size: 12px;
+                                line-height: 31px;
+                                a{
+                                    color: #00aeff;
+                                }
+                            }
+                            //预定样式
+                            .specBlock{
+                                width: 88px;
+                                height: 31px;
+                                padding: 0px 15px;
+                                border: 1px solid #efefef;
+                                color: #999;
+                                margin: 5px 10px;
+                                position: relative;
+                                font-size: 12px;
+                                line-height: 31px;
+                                a{
+                                    color: #999;
+                                }
+                            }
+                        }
+                        .specLabel{
+                            width: 60px;
+                            float: left;
+                            padding-top: 10px;
+                        }
+                        .specBlocks{
+                            width: 430px;
+                            float: left;
+                            .number-input{
+                                display: table-cell;
+                                padding-left: 11px;
+                                padding-top: 9px;
+                                overflow: hidden;
+                                vertical-align: top;
+                                .oper{
+                                    display: block;
+                                    width: 26px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    padding: 0;
+                                    text-align: center;
+                                    background-color: #ededed;
+                                    overflow: hidden;
+                                    color: #777;
+                                    i{
+                                        font-style: normal;
+                                        font-size: 21px;
+                                    }
+                                }
+                                .minus{
+                                    float: left;
+                                }
+                                .plus{
+                                    float: right;
+                                }
+                                #numText{
+                                    padding: 0;
+                                    width: 48px;
+                                    height: 30px;
+                                    font-size: 16px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    color: #777;
+                                    outline: 0;
+                                    background: #fff;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                    .action{
+                        margin: 10px 0;
+                        .btns{
+                            float: left;
+                            .commonBtn{
+                                height: 40px;
+                                width: 168px;
+                                font-size: 18px;
+                                line-height: 40px;
+                                display: inline-block;
+                                text-align: center;
+                                background-color: #00aeff;
+                                color: #fff;
+                                margin-right: 20px;
+                                border-radius: 3px;
+                                cursor: pointer;
+                            }
+                            .commonBtn2{
+                                background-color: #fff;
+                                color: #00aeff;
+                                border: 1px solid #00aeff;
+                                height: 40px;
+                                width: 168px;
+                                font-size: 18px;
+                                line-height: 40px;
+                                display: inline-block;
+                                text-align: center;
+                                margin-right: 20px;
+                                border-radius: 3px;
+                                cursor: pointer;
+                            }
+                        }
+                        .collect{
+                            display: inline-block;
+                            height: 40px;
+                            width: 40px;
+                            border: 1px solid #ccc;
+                            overflow: hidden;
+                            vertical-align: middle;
+                            text-align: center;
+                            border-radius: 3px;
+                            margin-bottom: 7px;
+                            cursor: pointer;
+                            .top{
+                                height: 20px;
+                                span{
+                                    height: 22px;
+                                    width: 22px;
+                                    display: inline-block;
+                                    background: url(/images/xin1.jpg)  no-repeat 2px;
+                                }
+                            }
+                            .down{
+                                height: 20px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

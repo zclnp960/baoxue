@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>暴雪周边商城-列表页</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/libs/font/iconfont.css">
+</head>
+<body>
+
+    <header id="head-container">
+
+    </header>
+
+    <main>
+        <div class="title">
+            <ul class="title-ul">
+                <li>全部商品>&nbsp;</li>
+                <li>商品筛选</li>
+            </ul>
+        </div>
+        <div class="search-res-container fix-width">
+            <div class="search-criteria-container">
+                <ul>
+                    <li class="header">游戏</li>
+                    <li class="list-items">
+                        <ul>
+                            <li>全部</li>
+                            <li>魔兽世界</li>
+                            <li>守望先锋</li>
+                            <li>炉石传说</li>
+                            <li>暗黑破坏神</li>
+                            <li>星际争霸2</li>
+                            <li>风暴英雄</li>
+                            <li>暴雪游戏</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="header">商品类别</li>
+                    <li class="list-items">
+                        <ul>
+                            <li>全部</li>
+                            <li>居家生活</li>
+                            <li>手办模型</li>
+                            <li>数码外设</li>
+                            <li>配饰挂件</li>
+                            <li>服装服饰</li>
+                            <li>图文书具</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="three-ul">
+                    <li class="header">排序方式</li>
+                    <li id="volume">销量</li>
+                    <li id="ceil">价格升序</li>
+                    <li id="floor">价格降序</li>
+                </ul>
+            </div>
+            <div class="search-result">
+                <ul class="product-list">
+                    
+                </ul>
+                <script type="text/html" id="listBox">
+                    {{ each list item }}
+                        <li  aId = "{{ item.id }}">
+                            <img src="{{ item.img }}" alt="">
+                            <span class="prod-info">{{ item.name}}</span>
+                            <span class="price-info normal">
+                                <span class="label">商城价</span>
+                                <span class="price">￥：<i>{{ item.price }}</i></span>
+                                <span class="four">销量:<i>{{ item.volume }}</i></span>
+                            </span>
+                        </li>
+                    {{ /each }}
+                </script>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer-container">
+
+    </footer>
+    <script src="/libs/requirejs/require.js" data-main = "/js/list.js"></script>
+</body>
+</html>
